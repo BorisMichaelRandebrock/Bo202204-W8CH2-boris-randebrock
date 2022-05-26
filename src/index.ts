@@ -6,3 +6,4 @@ const lili = new Cleaner("deuwef");
 lola.work();
 lili.work();
 lolo.work();
+console.log(lola.generateName());

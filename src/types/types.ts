@@ -22,6 +22,18 @@ class Robot implements IRobot {
   work() {
     console.log(this.message);
   }
+  generateName(): string {
+    let name: string = "";
+
+    const chars: string = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+    for (let i = 0; i <= 3; i++) {
+      if (i < 3) {
+        name += Math.floor(Math.random() * (99 - 10) + 10);
+      }
+      return name;
+    }
+  }
 }
 
 export class Cleaner extends Robot {
