@@ -1,9 +1,9 @@
-import { Cleaner, Developer, Waiter } from "./types/types";
+import Robot from "./classes/Robot";
+import { IRobot, RobotType } from "../src/interfaces/robotinterfaces";
 
-const lola = new Developer("blalalam");
-const lolo = new Waiter("bwdhufa");
-const lili = new Cleaner("deuwef");
-lola.work();
-lili.work();
-lolo.work();
-console.log(lola.generateName());
+const createRobot = (type: RobotType): IRobot => {
+  const newRobot = new Robot(type);
+  return newRobot;
+};
+
+const roomba = createRobot("Cleaner");
